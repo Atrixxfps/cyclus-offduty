@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
+
+* {
+    box-sizing: border-box;
+}
+  *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background: none;
+  text-align: center;
+}
+  
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: rgba(58, 68, 80, 0.664);
+    box-shadow: 2px solid black;
+    border-radius: 20px;
+}
+
+.logo {
+  width: 400px;
+  overflow: auto;
+  background-repeat: no-repeat;
+}
+
+.logo img {
+  position: fixed;
+  top: 21%;
+  left: 10%;
+  transform: translate(50%, -50%);
+}
+
+.line {
+    position: relative;
+    top: 39%;
+    left: 2%;
+    width: 80%;
+    height: 5px;
+    background-color: white;
+    border-radius: 700px;
+}
+
+.closebutton {
+    position: absolute;
+    top: 7%;
+    left: 92.5%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    z-index: 30;
+}
+  
+  .close {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 35px;
+}
+  
+  .close:hover {
+    cursor:pointer;
+    color: rgb(131, 130, 128);
+}
+
+.welkom {
+    position: relative;
+    top: 440%;
+    left: 475%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 1000px;
+    height: 80px;
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    z-index: 30;
+}
+
+.indienst {
+  cursor: pointer;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  border: 0.2em solid;
+  position: relative;
+  top: 55%;
+  left: 1%;
+  width: 155px;
+  overflow: hidden;
+  opacity: 0.8;
+  color: #FFF;
+}
+
+.uitdienst {
+  cursor: pointer;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  border: 0.2em solid;
+  position: relative;
+  top: 55%;
+  left: 2%;
+  width: 160px;
+  overflow: hidden;
+  opacity: 0.8;
+  color: #FFF;
+}
+
+.buttontext {
+  display: block;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.buttontext:before {
+  content: attr(title);
+}
+
+.buttontextbis {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(-1em);
+  opacity: 0;
+}
+
+.buttonmask {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+.indienst:hover {
+  opacity: 1;
+}
+.indienst:hover .buttontext {
+  -webkit-animation: fx-text 0.3s ease-out;
+          animation: fx-text 0.3s ease-out;
+}
+.indienst:hover .buttontextbis {
+  -webkit-animation: fx-text-bis 0.3s ease-out;
+          animation: fx-text-bis 0.3s ease-out;
+}
+.indienst:hover .buttonmask {
+  -webkit-animation: fx-mask 0.3s ease-out;
+          animation: fx-mask 0.3s ease-out;
+}
+
+.indienst:active {
+  opacity: 1;
+  background: white;
+  color: inherit;
+}
+
+.uitdienst:hover {
+  opacity: 1;
+}
+.uitdienst:hover .buttontext {
+  -webkit-animation: fx-text 0.3s ease-out;
+          animation: fx-text 0.3s ease-out;
+}
+.uitdienst:hover .buttontextbis {
+  -webkit-animation: fx-text-bis 0.3s ease-out;
+          animation: fx-text-bis 0.3s ease-out;
+}
+.uitdienst:hover .buttonmask {
+  -webkit-animation: fx-mask 0.3s ease-out;
+          animation: fx-mask 0.3s ease-out;
+}
+
+.uitdienst:active {
+  opacity: 1;
+  background: white;
+  color: inherit;
+}
+
+@-webkit-keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+@keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+@-webkit-keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+}
+@keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
